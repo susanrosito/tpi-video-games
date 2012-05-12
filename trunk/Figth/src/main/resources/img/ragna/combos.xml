@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:8e76101ac047c542322270ec0eb79df9$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="combos.png" width="4096" height="4096">
+    <sprite n="rg212_00" x="2" y="2" w="800" h="700"/>
+    <sprite n="rg212_01" x="804" y="2" w="800" h="700"/>
+    <sprite n="rg212_02" x="1606" y="2" w="800" h="700"/>
+    <sprite n="rg212_03" x="2408" y="2" w="800" h="700"/>
+    <sprite n="rg212_04" x="3210" y="2" w="800" h="700"/>
+    <sprite n="rg212_05" x="2" y="704" w="800" h="700"/>
+    <sprite n="rg212_06" x="804" y="704" w="800" h="700"/>
+    <sprite n="rg212_07" x="1606" y="704" w="800" h="700"/>
+    <sprite n="rg212_08" x="2408" y="704" w="800" h="700"/>
+    <sprite n="rg212_09" x="3210" y="704" w="800" h="700"/>
+    <sprite n="rg212_10" x="2" y="1406" w="800" h="700"/>
+    <sprite n="rg212_11" x="804" y="1406" w="800" h="700"/>
+    <sprite n="rg212_12" x="1606" y="1406" w="800" h="700"/>
+    <sprite n="rg212_13" x="2408" y="1406" w="800" h="700"/>
+    <sprite n="rg212_14" x="3210" y="1406" w="800" h="700"/>
+    <sprite n="rg212_15" x="2" y="2108" w="800" h="700"/>
+    <sprite n="rg212_16" x="804" y="2108" w="800" h="700"/>
+    <sprite n="rg212_17" x="1606" y="2108" w="800" h="700"/>
+    <sprite n="rg212_18" x="2408" y="2108" w="800" h="700"/>
+    <sprite n="rg212_19" x="3210" y="2108" w="800" h="700"/>
+    <sprite n="rg212_20" x="2" y="2810" w="800" h="700"/>
+</TextureAtlas>

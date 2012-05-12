@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:dc4023a29055ee80643f05aef2950064$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="golpe1.png" width="4096" height="4096">
+    <sprite n="rg203_00" x="3" y="3" w="800" h="700"/>
+    <sprite n="rg203_01" x="805" y="3" w="800" h="700"/>
+    <sprite n="rg203_02" x="1607" y="3" w="800" h="700"/>
+    <sprite n="rg203_03" x="2409" y="3" w="800" h="700"/>
+    <sprite n="rg203_04" x="3211" y="3" w="800" h="700"/>
+    <sprite n="rg203_05" x="3" y="705" w="800" h="700"/>
+    <sprite n="rg203_06" x="805" y="705" w="800" h="700"/>
+    <sprite n="rg203_07" x="1607" y="705" w="800" h="700"/>
+    <sprite n="rg203_08" x="2409" y="705" w="800" h="700"/>
+    <sprite n="rg203_09" x="3211" y="705" w="800" h="700"/>
+    <sprite n="rg203_10" x="3" y="1407" w="800" h="700"/>
+    <sprite n="rg203_11" x="805" y="1407" w="800" h="700"/>
+    <sprite n="rg203_12" x="1607" y="1407" w="800" h="700"/>
+    <sprite n="rg203_13" x="2409" y="1407" w="800" h="700"/>
+    <sprite n="rg203_14" x="3211" y="1407" w="800" h="700"/>
+    <sprite n="rg203_15" x="3" y="2109" w="800" h="700"/>
+    <sprite n="rg203_16" x="805" y="2109" w="800" h="700"/>
+    <sprite n="rg203_17" x="1607" y="2109" w="800" h="700"/>
+    <sprite n="rg203_18" x="2409" y="2109" w="800" h="700"/>
+</TextureAtlas>
