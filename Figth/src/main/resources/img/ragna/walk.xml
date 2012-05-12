@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:805a3ea1f4f3f7dc7d98eb72d4665ca4$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="ragnaWalk.png" width="4096" height="4096">
+    <sprite n="rg000_00" x="2" y="2" w="679" h="591"/>
+    <sprite n="rg000_01" x="683" y="2" w="679" h="591"/>
+    <sprite n="rg000_02" x="1364" y="2" w="679" h="591"/>
+    <sprite n="rg000_03" x="2045" y="2" w="679" h="591"/>
+    <sprite n="rg000_04" x="2726" y="2" w="679" h="591"/>
+    <sprite n="rg000_05" x="3407" y="2" w="679" h="591"/>
+    <sprite n="rg000_06" x="2" y="595" w="679" h="591"/>
+    <sprite n="rg024_00" x="683" y="595" w="679" h="591"/>
+    <sprite n="rg024_01" x="1364" y="595" w="679" h="591"/>
+    <sprite n="rg024_02" x="2045" y="595" w="679" h="591"/>
+    <sprite n="rg024_03" x="2726" y="595" w="679" h="591"/>
+    <sprite n="rg024_04" x="3407" y="595" w="679" h="591"/>
+    <sprite n="wl_2" x="2" y="1188" w="679" h="591"/>
+    <sprite n="wl_3" x="683" y="1188" w="679" h="591"/>
+    <sprite n="wl_4" x="1364" y="1188" w="679" h="591"/>
+    <sprite n="wl_5" x="2045" y="1188" w="679" h="591"/>
+    <sprite n="wl_6" x="2726" y="1188" w="679" h="591"/>
+    <sprite n="wl_7" x="3407" y="1188" w="679" h="591"/>
+    <sprite n="wl_8" x="2" y="1781" w="679" h="591"/>
+    <sprite n="wl_9" x="683" y="1781" w="679" h="591"/>
+    <sprite n="wr_1" x="1364" y="1781" w="679" h="591"/>
+    <sprite n="wr_2" x="2045" y="1781" w="679" h="591"/>
+    <sprite n="wr_3" x="2726" y="1781" w="679" h="591"/>
+    <sprite n="wr_4" x="3407" y="1781" w="679" h="591"/>
+    <sprite n="wr_5" x="2" y="2374" w="679" h="591"/>
+    <sprite n="wr_6" x="683" y="2374" w="679" h="591"/>
+    <sprite n="wr_7" x="1364" y="2374" w="679" h="591"/>
+    <sprite n="wr_8" x="2045" y="2374" w="679" h="591"/>
+    <sprite n="wr_9" x="2726" y="2374" w="679" h="591"/>
+</TextureAtlas>

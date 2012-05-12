@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:a60d9357d8eb0c19f5d423a1a272eab0$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="golpe2.png" width="2048" height="2048">
+    <sprite n="rg230_00" x="2" y="2" w="679" h="591"/>
+    <sprite n="rg230_01" x="683" y="2" w="679" h="591"/>
+    <sprite n="rg230_02" x="1364" y="2" w="679" h="591"/>
+    <sprite n="rg230_03" x="2" y="595" w="679" h="591"/>
+    <sprite n="rg230_04" x="683" y="595" w="679" h="591"/>
+    <sprite n="rg230_05" x="1364" y="595" w="679" h="591"/>
+</TextureAtlas>

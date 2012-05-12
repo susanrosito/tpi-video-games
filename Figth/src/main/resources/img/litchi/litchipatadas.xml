@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:95b1ab2e8e92b824b1977087b170fe1c$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="litchipatadas.png" width="4096" height="4096">
+    <sprite n="lc211_01" x="2" y="2" w="172" h="413"/>
+    <sprite n="lc211_02" x="176" y="2" w="181" h="404"/>
+    <sprite n="lc211_03" x="359" y="2" w="242" h="397"/>
+    <sprite n="lc211_04" x="603" y="2" w="281" h="412"/>
+    <sprite n="lc211_05" x="886" y="2" w="320" h="405"/>
+    <sprite n="lc211_06" x="1208" y="2" w="345" h="421"/>
+    <sprite n="lc211_07" x="1555" y="2" w="564" h="415"/>
+    <sprite n="lc211_08" x="2121" y="2" w="512" h="414"/>
+    <sprite n="lc211_09" x="2635" y="2" w="431" h="402"/>
+    <sprite n="lc211_10" x="3068" y="2" w="276" h="409"/>
+    <sprite n="lc211_11" x="3346" y="2" w="229" h="408"/>
+    <sprite n="lc211_12" x="3577" y="2" w="249" h="415"/>
+    <sprite n="lc211_13" x="2" y="425" w="290" h="429"/>
+    <sprite n="lc211_14" x="294" y="425" w="228" h="431"/>
+    <sprite n="lc211_15" x="524" y="425" w="171" h="430"/>
+    <sprite n="lc211_16" x="697" y="425" w="253" h="441"/>
+    <sprite n="lc212_01" x="952" y="425" w="165" h="434"/>
+    <sprite n="lc212_02" x="1119" y="425" w="148" h="428"/>
+    <sprite n="lc212_03" x="1269" y="425" w="194" h="416"/>
+    <sprite n="lc212_05" x="1465" y="425" w="406" h="373"/>
+    <sprite n="lc212_06" x="1873" y="425" w="383" h="391"/>
+    <sprite n="lc212_07" x="2258" y="425" w="303" h="375"/>
+    <sprite n="lc212_08" x="2563" y="425" w="421" h="363"/>
+    <sprite n="lc212_09" x="2986" y="425" w="340" h="366"/>
+    <sprite n="lc212_10" x="3328" y="425" w="292" h="349"/>
+    <sprite n="lc212_11" x="3622" y="425" w="328" h="353"/>
+    <sprite n="lc212_12" x="2" y="868" w="369" h="301"/>
+    <sprite n="lc212_13" x="373" y="868" w="337" h="316"/>
+    <sprite n="lc212_14" x="712" y="868" w="367" h="370"/>
+    <sprite n="lc212_15" x="1081" y="868" w="334" h="461"/>
+    <sprite n="lc212_16" x="1417" y="868" w="271" h="401"/>
+    <sprite n="lc212_17" x="1690" y="868" w="430" h="397"/>
+    <sprite n="lc212_18" x="2122" y="868" w="356" h="416"/>
+    <sprite n="lc212_19" x="2480" y="868" w="390" h="405"/>
+    <sprite n="lc212_20" x="2872" y="868" w="406" h="407"/>
+    <sprite n="lc212_21" x="3280" y="868" w="290" h="405"/>
+    <sprite n="lc216_00" x="3572" y="868" w="237" h="421"/>
+    <sprite n="lc216_01" x="2" y="1331" w="303" h="404"/>
+    <sprite n="lc216_02" x="307" y="1331" w="331" h="403"/>
+    <sprite n="lc216_03" x="640" y="1331" w="300" h="409"/>
+    <sprite n="lc216_04" x="942" y="1331" w="322" h="412"/>
+    <sprite n="lc216_05" x="1266" y="1331" w="342" h="419"/>
+    <sprite n="lc216_06" x="1610" y="1331" w="259" h="426"/>
+    <sprite n="lc216_07" x="1871" y="1331" w="551" h="227"/>
+    <sprite n="lc216_08" x="2424" y="1331" w="411" h="249"/>
+    <sprite n="lc216_09" x="2837" y="1331" w="278" h="296"/>
+    <sprite n="lc216_10" x="3117" y="1331" w="279" h="363"/>
+    <sprite n="lc216_11" x="3398" y="1331" w="263" h="382"/>
+    <sprite n="lc216_12" x="3663" y="1331" w="238" h="401"/>
+    <sprite n="lc216_13" x="2" y="1759" w="242" h="402"/>
+    <sprite n="lc311_00" x="246" y="1759" w="259" h="418"/>
+    <sprite n="lc311_01" x="507" y="1759" w="217" h="417"/>
+    <sprite n="lc311_02" x="726" y="1759" w="179" h="415"/>
+    <sprite n="lc311_03" x="907" y="1759" w="230" h="418"/>
+    <sprite n="lc311_05" x="1139" y="1759" w="282" h="442"/>
+    <sprite n="lc311_06" x="1423" y="1759" w="306" h="397"/>
+    <sprite n="lc311_07" x="1731" y="1759" w="361" h="454"/>
+    <sprite n="lc311_08" x="2094" y="1759" w="367" h="450"/>
+    <sprite n="lc311_09" x="2463" y="1759" w="429" h="432"/>
+    <sprite n="lc311_10" x="2894" y="1759" w="336" h="445"/>
+    <sprite n="lc311_11" x="3232" y="1759" w="354" h="412"/>
+    <sprite n="lc311_12" x="3588" y="1759" w="311" h="392"/>
+    <sprite n="lc313_00" x="2" y="2215" w="230" h="411"/>
+    <sprite n="lc313_01" x="234" y="2215" w="258" h="408"/>
+    <sprite n="lc313_02" x="494" y="2215" w="231" h="415"/>
+    <sprite n="lc313_03" x="727" y="2215" w="242" h="411"/>
+    <sprite n="lc313_04" x="971" y="2215" w="240" h="412"/>
+    <sprite n="lc313_05" x="1213" y="2215" w="256" h="416"/>
+    <sprite n="lc313_06" x="1471" y="2215" w="435" h="416"/>
+    <sprite n="lc313_07" x="1908" y="2215" w="432" h="432"/>
+    <sprite n="lc313_08" x="2342" y="2215" w="409" h="428"/>
+    <sprite n="lc313_09" x="2753" y="2215" w="395" h="430"/>
+    <sprite n="lc313_10" x="3150" y="2215" w="287" h="387"/>
+    <sprite n="lc313_11" x="3439" y="2215" w="211" h="425"/>
+    <sprite n="lc313_12" x="3652" y="2215" w="297" h="437"/>
+    <sprite n="lc313_13" x="2" y="2654" w="286" h="439"/>
+    <sprite n="lc313_14" x="290" y="2654" w="244" h="447"/>
+    <sprite n="lc313_15" x="536" y="2654" w="243" h="412"/>
+    <sprite n="lc313_16" x="781" y="2654" w="216" h="354"/>
+    <sprite n="lc313_17" x="999" y="2654" w="179" h="383"/>
+    <sprite n="lc313_18" x="1180" y="2654" w="159" h="392"/>
+    <sprite n="lc313_19" x="1341" y="2654" w="162" h="400"/>
+</TextureAtlas>
