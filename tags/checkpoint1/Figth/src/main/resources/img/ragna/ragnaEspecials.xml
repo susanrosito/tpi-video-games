@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:2d64aeadc2d4dad4d1dcbfd65b8382cd$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="ragnaEspecials.png" width="2048" height="4096">
+    <sprite n="rg432_00" x="2" y="2" w="299" h="428"/>
+    <sprite n="rg432_01" x="303" y="2" w="323" h="403"/>
+    <sprite n="rg432_02" x="628" y="2" w="296" h="385"/>
+    <sprite n="rg432_03" x="926" y="2" w="381" h="362"/>
+    <sprite n="rg432_04" x="1309" y="2" w="503" h="390"/>
+    <sprite n="rg432_05" x="2" y="432" w="603" h="394"/>
+    <sprite n="rg432_06" x="607" y="432" w="401" h="508"/>
+    <sprite n="rg432_07" x="1010" y="432" w="382" h="555"/>
+    <sprite n="rg432_08" x="1394" y="432" w="364" h="573"/>
+    <sprite n="rg432_09" x="2" y="1007" w="368" h="422"/>
+    <sprite n="rg432_10" x="372" y="1007" w="700" h="346"/>
+    <sprite n="rg432_11" x="1074" y="1007" w="332" h="387"/>
+    <sprite n="rg432_12" x="1408" y="1007" w="487" h="520"/>
+    <sprite n="rg432_14" x="2" y="1529" w="365" h="522"/>
+    <sprite n="rg432_15" x="369" y="1529" w="331" h="522"/>
+    <sprite n="rg432_16" x="702" y="1529" w="334" h="525"/>
+    <sprite n="rg432_17" x="1038" y="1529" w="337" h="526"/>
+    <sprite n="rg432_18" x="1377" y="1529" w="332" h="526"/>
+    <sprite n="rg432_19" x="1711" y="1529" w="331" h="522"/>
+    <sprite n="rg432_20" x="2" y="2057" w="340" h="525"/>
+    <sprite n="rg432_21" x="344" y="2057" w="339" h="522"/>
+    <sprite n="rg432_22" x="685" y="2057" w="301" h="400"/>
+    <sprite n="rg432_23" x="988" y="2057" w="297" h="361"/>
+    <sprite n="rg432_24" x="1287" y="2057" w="306" h="353"/>
+    <sprite n="rg432_25" x="1595" y="2057" w="244" h="354"/>
+    <sprite n="rg432_26" x="2" y="2584" w="331" h="347"/>
+    <sprite n="rg432_27" x="335" y="2584" w="346" h="330"/>
+    <sprite n="rg432_28" x="683" y="2584" w="323" h="291"/>
+    <sprite n="rg432_29" x="1008" y="2584" w="319" h="246"/>
+    <sprite n="rg432_30" x="1329" y="2584" w="330" h="280"/>
+    <sprite n="rg432_31" x="1661" y="2584" w="340" h="379"/>
+    <sprite n="rg432_32" x="2" y="2965" w="303" h="430"/>
+    <sprite n="rg432_33" x="307" y="2965" w="392" h="349"/>
+    <sprite n="rg432_34" x="701" y="2965" w="394" h="342"/>
+    <sprite n="rg432_35" x="1097" y="2965" w="368" h="349"/>
+    <sprite n="rg432_36" x="1467" y="2965" w="362" h="328"/>
+    <sprite n="rg432_37" x="2" y="3397" w="361" h="314"/>
+    <sprite n="rg432_38" x="365" y="3397" w="351" h="326"/>
+    <sprite n="rg432_39" x="718" y="3397" w="309" h="393"/>
+    <sprite n="rg432_40" x="1029" y="3397" w="287" h="421"/>
+    <sprite n="rg432_41" x="1318" y="3397" w="273" h="433"/>
+</TextureAtlas>

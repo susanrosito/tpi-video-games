@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:7d9d2fafb070395f199cad86046c4ea4$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="litchigolpes.png" width="2048" height="4096">
+    <sprite n="lc210_00" x="2" y="2" w="194" h="421"/>
+    <sprite n="lc210_01" x="198" y="2" w="163" h="426"/>
+    <sprite n="lc210_02" x="363" y="2" w="156" h="426"/>
+    <sprite n="lc210_03" x="521" y="2" w="156" h="428"/>
+    <sprite n="lc210_04" x="679" y="2" w="179" h="425"/>
+    <sprite n="lc210_05" x="860" y="2" w="193" h="426"/>
+    <sprite n="lc210_06" x="1055" y="2" w="250" h="430"/>
+    <sprite n="lc210_07" x="1307" y="2" w="301" h="476"/>
+    <sprite n="lc210_08" x="1610" y="2" w="334" h="439"/>
+    <sprite n="lc210_09" x="2" y="480" w="454" h="387"/>
+    <sprite n="lc210_10" x="458" y="480" w="403" h="472"/>
+    <sprite n="lc210_11" x="863" y="480" w="428" h="334"/>
+    <sprite n="lc210_12" x="1293" y="480" w="401" h="307"/>
+    <sprite n="lc210_13" x="2" y="954" w="390" h="307"/>
+    <sprite n="lc210_14" x="394" y="954" w="291" h="358"/>
+    <sprite n="lc210_15" x="687" y="954" w="253" h="382"/>
+    <sprite n="lc210_16" x="942" y="954" w="247" h="386"/>
+    <sprite n="lc210_17" x="1191" y="954" w="211" h="397"/>
+    <sprite n="lc210_18" x="1404" y="954" w="182" h="405"/>
+    <sprite n="lc210_19" x="1588" y="954" w="185" h="410"/>
+    <sprite n="lc232_00" x="2" y="1366" w="306" h="254"/>
+    <sprite n="lc232_01" x="310" y="1366" w="307" h="255"/>
+    <sprite n="lc232_02" x="619" y="1366" w="248" h="263"/>
+    <sprite n="lc232_03" x="869" y="1366" w="212" h="263"/>
+    <sprite n="lc232_04" x="1083" y="1366" w="246" h="265"/>
+    <sprite n="lc232_05" x="1331" y="1366" w="274" h="243"/>
+    <sprite n="lc232_06" x="1607" y="1366" w="279" h="225"/>
+    <sprite n="lc232_07" x="2" y="1633" w="323" h="218"/>
+    <sprite n="lc232_08" x="327" y="1633" w="358" h="275"/>
+    <sprite n="lc232_09" x="687" y="1633" w="346" h="280"/>
+    <sprite n="lc232_10" x="1035" y="1633" w="343" h="276"/>
+    <sprite n="lc232_11" x="1380" y="1633" w="343" h="296"/>
+    <sprite n="lc232_12" x="1725" y="1633" w="303" h="275"/>
+    <sprite n="lc232_13" x="2" y="1931" w="294" h="258"/>
+    <sprite n="lc232_14" x="298" y="1931" w="287" h="272"/>
+    <sprite n="lc232_15" x="587" y="1931" w="258" h="280"/>
+    <sprite n="lc232_16" x="847" y="1931" w="202" h="262"/>
+    <sprite n="lc232_17" x="1051" y="1931" w="221" h="246"/>
+    <sprite n="lc232_18" x="1274" y="1931" w="336" h="252"/>
+    <sprite n="lc312_00" x="1612" y="1931" w="285" h="404"/>
+    <sprite n="lc312_01" x="2" y="2337" w="271" h="393"/>
+    <sprite n="lc312_02" x="275" y="2337" w="297" h="399"/>
+    <sprite n="lc312_03" x="574" y="2337" w="309" h="372"/>
+    <sprite n="lc312_04" x="885" y="2337" w="320" h="320"/>
+    <sprite n="lc312_05" x="1207" y="2337" w="297" h="314"/>
+    <sprite n="lc312_06" x="1506" y="2337" w="306" h="323"/>
+    <sprite n="lc312_07" x="2" y="2738" w="322" h="369"/>
+    <sprite n="lc312_08" x="326" y="2738" w="337" h="384"/>
+    <sprite n="lc312_09" x="665" y="2738" w="242" h="398"/>
+    <sprite n="lc401_00" x="909" y="2738" w="285" h="428"/>
+    <sprite n="lc401_01" x="1196" y="2738" w="146" h="414"/>
+    <sprite n="lc401_02" x="1344" y="2738" w="282" h="435"/>
+    <sprite n="lc401_03" x="1628" y="2738" w="245" h="433"/>
+    <sprite n="lc401_04" x="2" y="3175" w="223" h="431"/>
+    <sprite n="lc401_05" x="227" y="3175" w="194" h="421"/>
+    <sprite n="lc401_06" x="423" y="3175" w="185" h="417"/>
+</TextureAtlas>

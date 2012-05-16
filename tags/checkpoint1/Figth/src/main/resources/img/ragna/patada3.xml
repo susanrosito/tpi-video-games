@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:303b32c2e02aaedce7c1ed99bdb7dddf$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="ragnaPatada3.png" width="2048" height="4096">
+    <sprite n="rg231_00" x="2" y="2" w="679" h="591"/>
+    <sprite n="rg231_01" x="683" y="2" w="679" h="591"/>
+    <sprite n="rg231_02" x="1364" y="2" w="679" h="591"/>
+    <sprite n="rg231_03" x="2" y="595" w="679" h="591"/>
+    <sprite n="rg231_04" x="683" y="595" w="679" h="591"/>
+    <sprite n="rg231_05" x="1364" y="595" w="679" h="591"/>
+    <sprite n="rg231_06" x="2" y="1188" w="679" h="591"/>
+    <sprite n="rg231_07" x="683" y="1188" w="679" h="591"/>
+    <sprite n="rg231_08" x="1364" y="1188" w="679" h="591"/>
+    <sprite n="rg231_09" x="2" y="1781" w="679" h="591"/>
+</TextureAtlas>
