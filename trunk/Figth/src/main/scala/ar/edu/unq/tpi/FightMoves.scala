@@ -25,14 +25,8 @@ class FightMoves(var key: String, var sprite: Sprite, var sourceXML: Node, var f
 
   def getAnimation(orientation: Orientation.Orientation): Animation = {
     if (orientation.equals(Orientation.RIGHT)) {
-      //      if (flipAnimation == null) {
-      //        flipAnimation = new Animation(meantime, buildSprites(sourceXML, key, sourceImage, true, 1).toArray)
-      //      }
       return flipAnimation
     } else {
-      //      if (animation == null) {
-      //        animation = new Animation(meantime, buildSprites(sourceXML, key, sourceImage, false, 1).toArray)
-      //      }
       return animation
     }
   }

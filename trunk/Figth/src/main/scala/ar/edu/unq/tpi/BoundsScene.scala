@@ -13,6 +13,7 @@ trait BoundsScene extends GameScene with TraitResources{
   var boundRigth:SpriteComponent[GameScene] = null
 
   override def setGame(game: Game) = {
+    super.setGame(game)
     boundLeft = new SpriteComponent(ScaleSpriteComponent.scale(sprite("bounds.png"), 20, game.getDisplayHeight()), 0, 0)
     boundRigth = new SpriteComponent(boundLeft.getAppearance(), game.getDisplayWidth()-20, 0)
     this.addComponents(boundLeft, boundRigth)

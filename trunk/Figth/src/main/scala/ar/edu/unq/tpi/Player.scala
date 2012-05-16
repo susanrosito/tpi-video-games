@@ -28,8 +28,6 @@ abstract class Player {
   def character = this._character
   def character_=(anCharacter: CharacterFight) = {
     this._character = anCharacter
-//    anCharacter.scene.addKeyPressetListener(anCharacter, this.LEFT, character.walkLeft)
-//    anCharacter.scene.addKeyPressetListener(anCharacter, this.RIGHT, character.walkRight)
     anCharacter.scene.addKeyPressetListener(anCharacter, this.K_HIGH_KICK1, character.attack(HIGH_KICK1))
     anCharacter.scene.addKeyPressetListener(anCharacter, this.K_HIGH_KICK2, character.attack(HIGH_KICK2))
     anCharacter.scene.addKeyPressetListener(anCharacter, this.K_LOW_KICK1, character.attack(LOW_KICK1))
