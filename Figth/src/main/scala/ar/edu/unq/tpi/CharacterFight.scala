@@ -44,6 +44,10 @@ class CharacterFight(player: Player, var character: Character, var scene: GamePl
     } else {
       this.move(-force, 0)
     }
+
+    if (this.character.death) {
+      dispatchEvent(new Event(GameEvents.DEATH, this))
+    }
   }
 
   def attack(attack: Movement)(delta: DeltaState) {
@@ -52,14 +56,12 @@ class CharacterFight(player: Player, var character: Character, var scene: GamePl
       isMoving = true;
       pego = false
       damageOponent()
-
     }
   }
 
   def damageOponent() {
     if (!pego && collidesWith(oponent)) {
       pego = true
-      //    if(CollisionDetector.INSTANCE.collidesWith(this, oponent, true)){
       oponent.receiveAttack(character.getMove(currentMove).force)
     }
   }
@@ -79,11 +81,7 @@ class CharacterFight(player: Player, var character: Character, var scene: GamePl
         super.update(deltaState)
       }
 
-      if (oponent.getX() > this.getX()) {
-        orientation = Orientation.RIGHT
-      } else {
-        orientation = Orientation.LEFT
-      }
+      updateOrientationRelativeToOponent()
     }
     if (currentMove == JUMP) {
       currentMove.update(this, deltaState)
@@ -91,6 +89,14 @@ class CharacterFight(player: Player, var character: Character, var scene: GamePl
       this.setY(baseY)
     }
 
+  }
+  
+  def updateOrientationRelativeToOponent() {
+    if (oponent.getX() > this.getX()) {
+      orientation = Orientation.RIGHT
+    } else {
+      orientation = Orientation.LEFT
+    }
   }
 
   def baseY = staticY - this.getAppearance().getHeight() + 120
@@ -107,8 +113,12 @@ class CharacterFight(player: Player, var character: Character, var scene: GamePl
     this.getAppearance().advance()
 
     isMoving = false;
-    if (collidesWith(scene.boundLeft) || collidesWith(oponent)) {
-      dispatchEvent(new Event("aa", this, this.orientation))
+    if (collidesWith(scene.boundLeft)) {
+      dispatchEvent(new Event(GameEvents.COLLIDE_WITH_BOUND_LEFT, this, this.orientation))
+      this.move(-moveX, 0)
+    }
+
+    if (collidesWith(oponent)) {
       this.move(-moveX, 0)
     }
   }
@@ -124,9 +134,12 @@ class CharacterFight(player: Player, var character: Character, var scene: GamePl
     this.getAppearance().advance()
     isMoving = false;
 
-    if (collidesWith(scene.boundRigth) || collidesWith(oponent)) {
+    if (collidesWith(scene.boundRigth)) {
+      dispatchEvent(new Event(GameEvents.COLLIDE_WITH_BOUND_RIGTH, this, this.orientation))
       this.move(-moveX, 0)
-      dispatchEvent(new Event("aa", this, this.orientation))
+    }
+    if (collidesWith(oponent)) {
+      this.move(-moveX, 0)
     }
 
   }
@@ -142,7 +155,5 @@ class CharacterFight(player: Player, var character: Character, var scene: GamePl
 
   var deltaWidth = 300
   var deltaHeight = 150
-
-  //  override def getX() = super.getX() + 100
 
 }

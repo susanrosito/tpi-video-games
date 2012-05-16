@@ -1,22 +1,21 @@
 package ar.edu.unq.tpi
-import java.awt.Color
 import java.awt.Dimension
 import com.uqbar.vainilla.appearances.Animation
 import com.uqbar.vainilla.appearances.Appearance
-import com.uqbar.vainilla.appearances.Rectangle
 import com.uqbar.vainilla.appearances.Sprite
 import com.uqbar.vainilla.events.constants.Key
-import com.uqbar.vainilla.events.constants.MouseButton
 import com.uqbar.vainilla.DeltaState
 import com.uqbar.vainilla.GameComponent
 import com.uqbar.vainilla.GameScene
 import ar.edu.unq.tpi.resource.TraitResources
 import ar.unq.tpi.collide.Colicionable
-import ar.unq.tpi.components.SelectComponent
+import ar.unq.tpi.components.AnimationComponent
+import ar.unq.tpi.components.ButtonComponent
+import ar.unq.tpi.components.MouseComponent
+import ar.unq.tpi.components.ScaleSpriteComponent
 import ar.unq.tpi.components.SelectComponent
 import ar.unq.tpi.components.SelectScene
 import ar.unq.tpi.components.Selectable
-import ar.unq.tpi.components.MouseComponent
 import ar.unq.tpi.components.SpriteComponent
 
 class InitialScene(game: Fight) extends GameScene() with TraitResources {
@@ -31,14 +30,10 @@ class InitialScene(game: Fight) extends GameScene() with TraitResources {
 }
 
 class LoadingScene(game: Fight) extends GameScene() with TraitResources {
-
-  var loading = sprite("loading.png")
-  loading = loading.scale(game.getDisplayWidth() / loading.getWidth(), game.getDisplayHeight() / loading.getHeight())
-  this.addComponent(new GameComponent[GameScene, Rectangle](new Rectangle(Color.WHITE, game.getDisplayWidth(), game.getDisplayHeight()), 0, 0))
-  this.addComponent(new GameComponent[GameScene, Appearance](loading, 0, 0))
+  this.addComponent(new SpriteComponent(ScaleSpriteComponent.scale(GameImage.LOADING, this.game.getDisplayWidth(), this.game.getDisplayHeight()), 0, 0))
 }
 
-class SelectArenaScene(game: Fight, character: CharacterAppearance) extends SelectScene() with TraitResources {
+class SelectArenaScene(game: Fight, character: CharacterAppearance) extends SelectScene() {
 
   val sizeBigArena = new Dimension(900, 500)
   val width = 300
@@ -57,27 +52,10 @@ class SelectArenaScene(game: Fight, character: CharacterAppearance) extends Sele
   this.addComponent(new GameComponent[GameScene, Animation](character.selectedAnimation, 10, 300))
 
   this.addComponent(bigArenaComponent)
+  var start = GameImage.BUTTON_START
 
-  var start = sprite("start.png")
-  this.addComponent(new GameComponent[GameScene, Sprite](start, game.getDisplayWidth() - (start.getWidth() + 100), game.getDisplayHeight() - (start.getHeight() + 100)) with Colicionable[GameScene, Sprite] {
-    override def update(delta: DeltaState) {
-      if (delta.isMouseButtonPressed(MouseButton.LEFT)) {
-        if (isClickMe(delta.getCurrentMousePosition())) {
-          game.playGame(character, arenaSelected)
-        }
-      }
-    }
-    def getImage() = this.getAppearance().getImage()
-    def width = this.getAppearance().getWidth()
-    def height = this.getAppearance().getHeight()
-  })
-
-  this.addComponent(new GameComponent[GameScene, Sprite](sprite("sword.png"), 0, 0) {
-    override def update(delta: DeltaState) {
-      this.setX(delta.getCurrentMousePosition().getX())
-      this.setY(delta.getCurrentMousePosition().getY())
-    }
-  })
+  this.addComponent(new ButtonComponent(start, start, game.getDisplayWidth() - (start.getWidth() + 100), game.getDisplayHeight() - (start.getHeight() + 100), onStart))
+  this.addComponent(new MouseComponent(GameImage.SWORD, 0, 0))
 
   override def selectItem(arena: Selectable) {
     arenaSelected = arena
@@ -85,10 +63,14 @@ class SelectArenaScene(game: Fight, character: CharacterAppearance) extends Sele
 
   }
 
+  def onStart(delta: DeltaState) {
+    game.playGame(character, arenaSelected)
+  }
+
   def scaleBigArena(sprite: Sprite) = sprite.scale(sizeBigArena.width / sprite.getWidth(), sizeBigArena.height / sprite.getHeight())
 }
 
-class SelectCharacterScene(game: Fight) extends SelectScene() with TraitResources {
+class SelectCharacterScene(game: Fight) extends SelectScene() {
 
   val sizeBigArena = new Dimension(900, 500)
   val width = 300
@@ -97,11 +79,13 @@ class SelectCharacterScene(game: Fight) extends SelectScene() with TraitResource
   val initialY = 20
   val padding = 50
   var characterSelected: SelectableCharacter = new SelectableCharacter(Ragna)
-  
-  var backgrond = sprite("00101.png")
-  backgrond = backgrond.scale(game.getDisplayWidth()/backgrond.getWidth(), game.getDisplayHeight()/backgrond.getHeight())
-  
-  this.addComponent(new SpriteComponent(backgrond, 0,0))
+
+  var backgrondImage1 = ScaleSpriteComponent.scale(sprite("00002.png"), game.getDisplayWidth(), game.getDisplayHeight())
+  var backgrondImage2 = ScaleSpriteComponent.scale(sprite("00003.png"), game.getDisplayWidth(), game.getDisplayHeight())
+  var backgrondImage3 = ScaleSpriteComponent.scale(sprite("00004.png"), game.getDisplayWidth(), game.getDisplayHeight())
+  var backgrondAnimation = new Animation(1, 1, backgrondImage1, backgrondImage2, backgrondImage3);
+
+  this.addComponent(new AnimationComponent(backgrondAnimation, 0, 0))
   this.addComponent(new SelectComponent(this, characterSelected, initialX, initialY, width, height))
   this.addComponent(new SelectComponent(this, new SelectableCharacter(Litchi), initialX + (3 * width) + (3 * padding), initialY, width, height))
 
@@ -109,21 +93,11 @@ class SelectCharacterScene(game: Fight) extends SelectScene() with TraitResource
 
   this.addComponent(bigArenaComponent)
 
-  var start = sprite("start.png")
-  this.addComponent(new GameComponent[GameScene, Sprite](start, game.getDisplayWidth() - (start.getWidth() + 100), game.getDisplayHeight() - (start.getHeight() + 100)) with Colicionable[GameScene, Sprite] {
-    override def update(delta: DeltaState) {
-      if (delta.isMouseButtonPressed(MouseButton.LEFT)) {
-        if (isClickMe(delta.getCurrentMousePosition())) {
-          game.selectArena(characterSelected)
-        }
-      }
-    }
-    def getImage() = this.getAppearance().getImage()
-    def width = this.getAppearance().getWidth()
-    def height = this.getAppearance().getHeight()
-  })
+  var start = GameImage.BUTTON_START
 
-  this.addComponent(new MouseComponent(sprite("sword.png"), 0, 0))
+  this.addComponent(new ButtonComponent(start, start, game.getDisplayWidth() - (start.getWidth() + 100), game.getDisplayHeight() - (start.getHeight() + 100), onStart))
+
+  this.addComponent(new MouseComponent(GameImage.SWORD, 0, 0))
 
   override def selectItem(selectable: Selectable) {
     selectable match {
@@ -136,4 +110,7 @@ class SelectCharacterScene(game: Fight) extends SelectScene() with TraitResource
 
   }
 
+  def onStart(delta: DeltaState) {
+    game.selectArena(characterSelected)
+  }
 }

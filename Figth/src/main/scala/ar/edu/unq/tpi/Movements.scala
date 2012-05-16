@@ -8,99 +8,107 @@ import com.uqbar.vainilla.DeltaState
 //}
 
 abstract class Movement {
-  def update(character:CharacterFight, deltaState:DeltaState)
+  def update(character:CharacterFight, deltaState:DeltaState){
+//      character.setY(character.baseY)
+  }
 }
 
 object SELECTED extends Movement{
-  def update(character:CharacterFight, deltaState:DeltaState){
+  override def update(character:CharacterFight, deltaState:DeltaState){
     
   }
 }
 
 object IDLE extends Movement{
-  def update(character:CharacterFight, deltaState:DeltaState){
+  override def update(character:CharacterFight, deltaState:DeltaState){
     
   }
 }
 
 object WALK extends Movement{
-  def update(character:CharacterFight, deltaState:DeltaState){
+  override def update(character:CharacterFight, deltaState:DeltaState){
     
   }
 }
 
 object WALK_BACK extends Movement{
-  def update(character:CharacterFight, deltaState:DeltaState){
+  override def update(character:CharacterFight, deltaState:DeltaState){
     
   }
 }
 
 object HIGH_KICK1 extends Movement{
-  def update(character:CharacterFight, deltaState:DeltaState){
+  override def update(character:CharacterFight, deltaState:DeltaState){
     
   }
 }
 
 object LOW_KICK1 extends Movement{
-  def update(character:CharacterFight, deltaState:DeltaState){
+  override def update(character:CharacterFight, deltaState:DeltaState){
     
   }
 }
 
 object HIGH_KICK2 extends Movement{
-  def update(character:CharacterFight, deltaState:DeltaState){
+  override def update(character:CharacterFight, deltaState:DeltaState){
     
   }
 }
 object HIGH_PUCH1 extends Movement{
-  def update(character:CharacterFight, deltaState:DeltaState){
+  override def update(character:CharacterFight, deltaState:DeltaState){
     
   }
 }
 
 object HIGH_PUCH2 extends Movement{
-  def update(character:CharacterFight, deltaState:DeltaState){
+  override def update(character:CharacterFight, deltaState:DeltaState){
     
   }
 }
 
 object LOW_PUNCH2 extends Movement{
-  def update(character:CharacterFight, deltaState:DeltaState){
+  override def update(character:CharacterFight, deltaState:DeltaState){
     
   }
 }
 
 object LOW_PUNCH1 extends Movement{
-  def update(character:CharacterFight, deltaState:DeltaState){
+  override def update(character:CharacterFight, deltaState:DeltaState){
     
   }
 }
 
 object LOW_KICK2 extends Movement{
-  def update(character:CharacterFight, deltaState:DeltaState){
+  override def update(character:CharacterFight, deltaState:DeltaState){
     
   }
 }
 
 object JUMP extends Movement{
-  def update(character:CharacterFight, deltaState:DeltaState){
-    if(character.getY() > character.baseY - (character.getAppearance().getHeight())){
+  var inUp = true
+  
+  override def update(character:CharacterFight, deltaState:DeltaState){
+    if(inUp && character.getY() > 0){
       character.isMoving = true
+      inUp = true
       character.move(0, -30)
     }else{
       if(character.getY() < character.baseY ){
+        inUp = false
         character.isMoving = true
         character.move(0, 30)
+//        character.getAppearance().advance()
       }else{
         character.getAppearance().advance()
         character.isMoving = false
+        inUp = true	
       }
     }
   }
 }
 
 object COMBO1 extends Movement{
-  def update(character:CharacterFight, deltaState:DeltaState){
+  override def update(character:CharacterFight, deltaState:DeltaState){
     
   }
 }

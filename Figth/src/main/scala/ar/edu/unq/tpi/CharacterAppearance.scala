@@ -5,7 +5,14 @@ import com.uqbar.vainilla.appearances.Sprite
 
 import ar.edu.unq.tpi.resource.TraitResources
 
-class CharacterAppearance() extends TraitResources {
+abstract class CharacterAppearance(any:Any) extends TraitResources {
+  
+  def this(){
+    this(null)
+    this.configureAppearance()
+  }
+  
+  def configureAppearance()
 
   val movements = new HashMap[Movement, FightMoves]()
   var selectedImage: Sprite = null
@@ -21,6 +28,8 @@ class CharacterAppearance() extends TraitResources {
 
 object Ragna extends CharacterAppearance {
 
+  def configureAppearance{
+    
   var meantimeAnimation = 0.001
 
   var ragnaWalk = sprite("ragna/walk.png")
@@ -52,9 +61,9 @@ object Ragna extends CharacterAppearance {
   this.addMove(WALK, new FightMoves("wl", ragnaWalk, ragnaWalkXML, 0))
   this.addMove(WALK_BACK, new FightMoves("wr", ragnaWalk, ragnaWalkXML, 0))
   this.addMove(JUMP, new FightMoves("rg024_", ragnaWalk, ragnaWalkXML, 0, 2))
-
+  //
   this.selectedImage = sprite("ragna/ragnaSelected.png")
-
+  //
   this.addMove(HIGH_KICK1, new FightMoves("rg201_", ragnaPatadas1, ragnaPatadas1XML, 10))
   this.addMove(HIGH_KICK2, new FightMoves("rg211_", ragnaPatadas2, ragnaPatadas2XML, 20))
   this.addMove(LOW_KICK1, new FightMoves("rg231_", ragnaPatadas3, ragnaPatadas3XML, 10))
@@ -68,35 +77,39 @@ object Ragna extends CharacterAppearance {
 
   this.addMove(COMBO1, new FightMoves("rg212_", ragnaCombos, ragnaCombosXML, 10))
 
-  //FAKE    
-  //      this.addMove(HIGH_KICK1, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
-  //  this.addMove(HIGH_KICK2, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
-  //  this.addMove(LOW_KICK1, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
-  //  this.addMove(LOW_KICK2, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
-  //  this.addMove(HIGH_PUCH1, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
-  //  this.addMove(HIGH_PUCH2, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
-  //  this.addMove(COMBO1, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
-  //  this.addMove(LOW_PUNCH2, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
-  //  this.addMove(LOW_PUNCH1, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
-  //
+    //FAKE    
+    //  this.addMove(HIGH_KICK1, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
+    //  this.addMove(HIGH_KICK2, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
+    //  this.addMove(LOW_KICK1, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
+    //  this.addMove(LOW_KICK2, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
+    //  this.addMove(HIGH_PUCH1, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
+    //  this.addMove(HIGH_PUCH2, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
+    //  this.addMove(COMBO1, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
+    //  this.addMove(LOW_PUNCH2, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
+    //  this.addMove(LOW_PUNCH1, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
+    //  this.addMove(IDLE, new IdleMoves("rg000_", ragnaWalk, ragnaWalkXML, 0, 0.05))
+    //
+  }
 
 }
 
 object Litchi extends CharacterAppearance {
 
+def configureAppearance{
+  
   var meantimeAnimation = 0.001
 
   var litchiWalk = sprite("litchi/litchiwalk.png")
   var litchiWalkXML = xmlFromFile("img/litchi/litchiwalk.xml")
-
-  var litchiWait = sprite("litchi/litchiwait.png")
-  var litchiWaitXML = xmlFromFile("img/litchi/litchiwait.xml")
-
-  var litchiGolpes = sprite("litchi/litchigolpes.png")
-  var litchiGolpesXML = xmlFromFile("img/litchi/litchigolpes.xml")
-
-  var litchiPatadas = sprite("litchi/litchipatadas.png")
-  var litchiPatadasXML = xmlFromFile("img/litchi/litchipatadas.xml")
+  
+    var litchiWait = sprite("litchi/litchiwait.png")
+    var litchiWaitXML = xmlFromFile("img/litchi/litchiwait.xml")
+  
+    var litchiGolpes = sprite("litchi/litchigolpes.png")
+    var litchiGolpesXML = xmlFromFile("img/litchi/litchigolpes.xml")
+  
+    var litchiPatadas = sprite("litchi/litchipatadas.png")
+    var litchiPatadasXML = xmlFromFile("img/litchi/litchipatadas.xml")
 
   /*var ragnaEspecials = sprite("ragna/ragnaEspecials.png"))
       var ragnaEspecialsXML = xmlFromFile("img/ragna/ragnaEspecials.xml").getFile())
@@ -110,31 +123,32 @@ object Litchi extends CharacterAppearance {
   this.addMove(WALK_BACK, new FightMoves("lc031_", litchiWalk, litchiWalkXML, 0))
 
   this.selectedImage = sprite("litchi/litchiSelected.png")
-  this.addMove(IDLE, new FightMoves("lc000_", litchiWait, litchiWaitXML, 0, 0.05))
-  this.addMove(JUMP, new FightMoves("lc000_", litchiWait, litchiWaitXML, 0, 0.05))
+    this.addMove(IDLE, new FightMoves("lc000_", litchiWait, litchiWaitXML, 0, 0.05))
+    this.addMove(JUMP, new FightMoves("lc000_", litchiWait, litchiWaitXML, 0, 0.05))
+  
+    this.addMove(WALK, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0))
+    this.addMove(WALK_BACK, new FightMoves("lc031_", litchiWalk, litchiWalkXML, 0))
+  
+    this.addMove(HIGH_KICK1, new FightMoves("lc211_", litchiPatadas, litchiPatadasXML, 10))
+    this.addMove(HIGH_KICK2, new FightMoves("lc212_", litchiPatadas, litchiPatadasXML, 20))
+    this.addMove(LOW_KICK1, new FightMoves("lc216_", litchiPatadas, litchiPatadasXML, 10))
+    this.addMove(LOW_KICK2, new FightMoves("lc311_", litchiPatadas, litchiPatadasXML, 20))
+  
+    this.addMove(HIGH_PUCH1, new FightMoves("lc210_", litchiGolpes, litchiGolpesXML, 10))
+    this.addMove(HIGH_PUCH2, new FightMoves("lc210_", litchiGolpes, litchiGolpesXML, 10))
+    this.addMove(LOW_PUNCH2, new FightMoves("lc232_", litchiGolpes, litchiGolpesXML, 10))
+    this.addMove(LOW_PUNCH1, new FightMoves("lc312_", litchiGolpes, litchiGolpesXML, 10))
 
-  this.addMove(WALK, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0))
-  this.addMove(WALK_BACK, new FightMoves("lc031_", litchiWalk, litchiWalkXML, 0))
+    //FAKE
+    //  this.addMove(HIGH_KICK1, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
+    //  this.addMove(HIGH_KICK2, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
+    //  this.addMove(LOW_KICK1, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
+    //  this.addMove(LOW_KICK2, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
+    //  this.addMove(HIGH_PUCH1, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
+    //  this.addMove(HIGH_PUCH2, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
+    //  this.addMove(LOW_PUNCH2, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
+    //  this.addMove(LOW_PUNCH1, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
 
-  this.addMove(HIGH_KICK1, new FightMoves("lc211_", litchiPatadas, litchiPatadasXML, 10))
-  this.addMove(HIGH_KICK2, new FightMoves("lc212_", litchiPatadas, litchiPatadasXML, 20))
-  this.addMove(LOW_KICK1, new FightMoves("lc216_", litchiPatadas, litchiPatadasXML, 10))
-  this.addMove(LOW_KICK2, new FightMoves("lc311_", litchiPatadas, litchiPatadasXML, 20))
-
-  this.addMove(HIGH_PUCH1, new FightMoves("lc210_", litchiGolpes, litchiGolpesXML, 10))
-  this.addMove(HIGH_PUCH2, new FightMoves("lc210_", litchiGolpes, litchiGolpesXML, 10))
-  this.addMove(LOW_PUNCH2, new FightMoves("lc232_", litchiGolpes, litchiGolpesXML, 10))
-  this.addMove(LOW_PUNCH1, new FightMoves("lc312_", litchiGolpes, litchiGolpesXML, 10))
-
-  //FAKE
-  //  this.addMove(HIGH_KICK1, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
-  //  this.addMove(HIGH_KICK2, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
-  //  this.addMove(LOW_KICK1, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
-  //  this.addMove(LOW_KICK2, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
-  //  this.addMove(HIGH_PUCH1, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
-  //  this.addMove(HIGH_PUCH2, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
-  //  this.addMove(LOW_PUNCH2, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
-  //  this.addMove(LOW_PUNCH1, new FightMoves("lc030_", litchiWalk, litchiWalkXML, 0, 0.05))
-
+  }
 }
 
