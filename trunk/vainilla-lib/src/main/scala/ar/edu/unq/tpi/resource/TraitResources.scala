@@ -28,7 +28,7 @@ trait TraitResources {
     return buffer.toArray
   }
 
-  def getImage(name: String) = ImageIO.read(new File(PATH + "img/" + name))
+  def getImage(name: String) = ImageIO.read(this.getClass().getResource("/img/" + name))
   def getFileOutputStream(name: String) = new FileOutputStream(PATH + name)
   def getFileInputStream(name: String) = new FileInputStream(PATH + name)
 

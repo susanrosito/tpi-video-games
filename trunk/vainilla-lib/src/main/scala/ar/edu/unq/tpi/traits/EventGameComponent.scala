@@ -10,7 +10,7 @@ trait EventGameComponent[T <: EventGameComponent[T]] {
   protected def dispatchEvent[A <: Any](event: Event[T, A]) {
     listeners.keys.foreach(key => {
       if (key.equals(event.name)) {
-        listeners(key).foreach(listener => listener.aply(event))
+        listeners(key).foreach(listener => listener.apply(event))
       }
     })
   }
@@ -24,7 +24,8 @@ trait EventGameComponent[T <: EventGameComponent[T]] {
 
   def removeEventListener[A <: Any](eventName: String, listener: (Event[T, A]) => Unit) {
     if (listeners.contains(eventName)) {
-      listeners(eventName).-=(new Function(listener))
+//      listeners(eventName).-=(new Function(listener))
+      listeners(eventName).clear()
     }
   }
   
@@ -32,7 +33,8 @@ trait EventGameComponent[T <: EventGameComponent[T]] {
 
 
 private class Function[A, B]( val listener:(Event[A,B]) =>Unit){
-  def aply(event:Event[A, _]) = event match{
+  
+  def apply(event:Event[A, _]) = event match{
     case e:Event[A, B] => listener(e)
   }
   
@@ -42,4 +44,6 @@ private class Function[A, B]( val listener:(Event[A,B]) =>Unit){
       case _ => false
     }
   }
+  
+  override def hashCode() = listener.hashCode()
 }
