@@ -68,7 +68,7 @@ trait EventGameScene extends GameScene {
 
   protected def removeListener[E](component: Any, map: Map[E, Map[Any, Buffer[(DeltaState) => Unit]]], e: E, listener: (DeltaState) => Unit) {
     if (map.contains(e) && map(e).contains(component)) {
-		map(e)(component) = Buffer[(DeltaState) => Unit]()
+		map(e)(component).clear()
     }
 
   }

@@ -6,10 +6,10 @@ import com.uqbar.vainilla.GameScene
 import java.awt.Color
 import com.uqbar.vainilla.DeltaState
 
-class Stats(label:Label, x:Double, y:Double) extends GameComponent[GameScene, Label](label, x, y) {
+class Stats(font:Font, color:Color, x:Double, y:Double) extends LabelComponent[GameScene]("",  font, color, x, y) {
   
   def this(x:Double, y:Double) = {
-    this(new Label(new Font(Font.SANS_SERIF, Font.BOLD, 18), Color.BLUE, ""), x, y)
+    this(new Font(Font.SANS_SERIF, Font.BOLD, 18), Color.BLUE, x, y)
   }
   
   override def update(deltaState:DeltaState) ={

@@ -22,7 +22,7 @@ class AnimateSprite(var originalImage: BufferedImage) extends Sprite(originalIma
   
 }
 
-class CenterComponent(appearance:Appearance, width:Double, height:Double, x:Double, y:Double) extends GameComponent[GameScene, Appearance](appearance, x, y){
+class CenterComponent(appearance:Appearance, width:Double, height:Double) extends GameComponent[GameScene, Appearance](appearance, 0,0){
   
   override def update(deltaState: DeltaState) = {
       super.update(deltaState)
